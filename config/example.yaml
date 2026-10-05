@@ -1,0 +1,37 @@
+# Example configuration. Mode must be explicit; LIVE additionally requires SCALPER_LIVE_CONFIRM=<today>,
+# a valid token, a passing pre-flight and the explicit acknowledgement below (FR-MODE-2).
+mode: PAPER
+
+live:
+  capital_allocation: 0            # rupees; > 0 required for LIVE
+  suspended: false                 # written true automatically on an 8% drawdown
+  i_understand_real_money_is_at_risk: false
+
+risk:
+  capital: 300000
+  risk_per_trade_pct: 0.0025
+  leverage_cap: 2.0
+  max_positions: 3
+  max_per_sector: 1
+  max_open_risk_pct: 0.0075
+  daily_loss_hard_pct: 0.010
+  daily_loss_soft_pct: 0.006
+  max_trades_day: 20
+  min_order_notional: 40000
+
+session:
+  earliest_entry: "09:20"
+  entry_cutoff: "14:45"
+  flatten_start: "15:00"
+  flatten_deadline: "15:10"
+
+throttle:
+  per_second: 3                    # SEBI registration threshold is 10 orders/s; Upstox API limit 25 req/s
+  per_minute: 120
+
+strategies:
+  orb_inplay:
+    enabled: true
+    or_minutes: 15                 # free parameter 1
+    min_rvol: 2.0                  # free parameter 2
+    target_r: 2.0                  # free parameter 3

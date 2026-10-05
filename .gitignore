@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Market data, journals, research outputs (large / account-specific)
+data/
+*.sqlite
+*.sqlite-*
+*.parquet
+demo_journal.sqlite*
+
+# Secrets — never commit credentials or tokens (ADR-10)
+.env
+*.env
+token.json
+.scalper/
+config/local*.yaml
+config/secrets*.yaml

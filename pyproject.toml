@@ -1,0 +1,15 @@
+[project]
+name = "scalper"
+version = "0.1.0"
+description = "Disciplined intraday scalping system for NSE equities via Upstox (research-first)"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "pandas>=2.1", "pyarrow>=15"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+live = ["upstox-python-sdk>=2.30", "protobuf>=4", "websockets>=12"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
