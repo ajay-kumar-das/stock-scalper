@@ -6,8 +6,9 @@ __pycache__/
 .venv/
 venv/
 
-# Market data, journals, research outputs (large / account-specific)
-data/
+# Market data, journals, research outputs (large / account-specific).
+# Anchored to the repo root: an unanchored "data/" also hid the scalper/data package.
+/data/
 *.sqlite
 *.sqlite-*
 *.parquet

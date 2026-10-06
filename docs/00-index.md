@@ -1,6 +1,6 @@
 # Stock Scalper — Design Document Set
 
-Status: **M0 design complete · M1 foundation complete (69 tests; see [reviews/M1.md](reviews/M1.md)) · next: M2 data & replay.**
+Status: **M0 design complete · M1 foundation complete · M2 data & replay code complete (95 tests), gate pending real recorded data — see [reviews/M2-progress.md](reviews/M2-progress.md).**
 Owner: Ajay · Prepared 2026-10-05
 
 | # | Document | Purpose |

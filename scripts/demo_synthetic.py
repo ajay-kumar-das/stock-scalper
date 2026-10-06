@@ -8,6 +8,10 @@ significant net edge. The default plants a momentum effect so the full trade lif
 import argparse
 import json
 
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parents[1]))   # works from a checkout without installing
+
 from scalper.backtest.runner import run_backtest
 from scalper.data.synthetic import INDEX_KEY, SynthConfig, generate
 from scalper.decision.pipeline import research_config

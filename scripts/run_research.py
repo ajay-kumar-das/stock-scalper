@@ -10,6 +10,10 @@ run in parallel processes.
 import argparse
 import json
 
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parents[1]))   # works from a checkout without installing
+
 from scalper.backtest.partitions import PARTITIONS, ExperimentRegistry, date_filter
 from scalper.backtest.runner import month_windows, run_windows
 from scalper.data.bhavcopy import load_dir, point_in_time_universe

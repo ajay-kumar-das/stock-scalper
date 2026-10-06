@@ -33,7 +33,7 @@ Each component is a percentile rank within the eligible universe at that moment 
 |-----------|---------|--------|-----------|
 | Relative volume (RVOL) | cumulative volume today / average cumulative volume at the same minute over 20 sessions | 0.25 | Abnormal participation = information/flows present ("in play") |
 | Relative strength | stock return since open − β × NIFTY return; also vs sector index | 0.20 | Leaders keep leading intraday when institutions are accumulating |
-| Directional efficiency | |net move| / sum of |1-min moves| over last 30 min (Kaufman efficiency ratio) | 0.20 | Clean, trending price paths have less noise relative to move → stops less likely hit by noise |
+| Directional efficiency | \|net move\| / sum of \|1-min moves\| over last 30 min (Kaufman efficiency ratio) | 0.20 | Clean, trending price paths have less noise relative to move → stops less likely hit by noise |
 | Tradable volatility | 15-min realised range / round-trip cost (bps) | 0.15 | Move must be large relative to cost |
 | Liquidity quality | inverse of current spread (bps) × top-5 depth value | 0.10 | Execution reliability |
 | Book pressure | (total buy qty − total sell qty)/(sum), smoothed | 0.05 | Weak evidence; small weight until validated with recorded data |

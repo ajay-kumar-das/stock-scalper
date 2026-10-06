@@ -14,6 +14,10 @@ import time as _time
 from datetime import datetime, time, timedelta
 from pathlib import Path
 
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parents[1]))   # works from a checkout without installing
+
 from scalper.core.clock import WallClock
 from scalper.data.instruments import download_master, load_token, parse_master
 from scalper.data.store import BarStore

@@ -11,6 +11,10 @@ import json
 from datetime import date
 from pathlib import Path
 
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parents[1]))   # works from a checkout without installing
+
 from scalper.data.instruments import download_master, load_token, parse_master
 from scalper.data.store import BarStore
 from scalper.data.upstox_history import HistoryClient
